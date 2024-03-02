@@ -59,7 +59,7 @@ function MyComponent() {
       {imageData.map((image) => (
         <div className = "image-container">
           <div className = "image-wrapper">
-        <img
+        <img  
           key={image.id}
           src={image.src}
           alt={image.alt}
@@ -73,7 +73,7 @@ function MyComponent() {
 
 
         {isImageClicked && data && (image.alt === agentId) && (
-          <div className = "item">
+          <div className = "item" key={agentId}>
 
        
             <p className = "name" >{data.data.displayName}</p>
